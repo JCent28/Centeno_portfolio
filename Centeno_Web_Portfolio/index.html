@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="logo">
+                <h1 class="typewriter" id="nameTypewriter">Your Name</h1>
+            </div>
+            <nav class="nav" id="nav">
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#capstone" class="nav-link">Capstone</a></li>
+                    <li><a href="#practicum" class="nav-link">Practicum</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- CV Download Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="about-content">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="intro-text">
+                        Hello! I'm a passionate developer with experience in various programming languages and technologies. 
+                        I enjoy creating innovative solutions and bringing ideas to life through code. 
+                        My journey in software development has equipped me with skills in both frontend and backend technologies.
+                    </p>
+                    <button class="cv-download-btn" onclick="downloadCV()">
+                        <i class="fas fa-download"></i>
+                        Download CV
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programming Skills -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <h2 class="section-title">Programming Skills</h2>
+                <div class="skills-container">
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">MongoDB</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates and Seminars -->
+        <section id="certificates" class="section certificates-section">
+            <div class="container">
+                <h2 class="section-title">Certificates & Seminars</h2>
+                <div class="certificates-grid">
+                    <div class="certificate-card">
+                        <div class="certificate-image">
+                            <img src="https://via.placeholder.com/300x200/BB86FC/FFFFFF?text=Certificate+1" alt="Certificate 1">
+                        </div>
+                        <div class="certificate-content">
+                            <h3>Certificate Title 1</h3>
+                            <p class="certificate-date">January 2024</p>
+                            <p class="certificate-description">Description of the certificate or seminar attended.</p>
+                        </div>
+                    </div>
+                    <div class="certificate-card">
+                        <div class="certificate-image">
+                            <img src="https://via.placeholder.com/300x200/03DAC6/FFFFFF?text=Certificate+2" alt="Certificate 2">
+                        </div>
+                        <div class="certificate-content">
+                            <h3>Certificate Title 2</h3>
+                            <p class="certificate-date">March 2024</p>
+                            <p class="certificate-description">Description of the certificate or seminar attended.</p>
+                        </div>
+                    </div>
+                    <div class="certificate-card">
+                        <div class="certificate-image">
+                            <img src="https://via.placeholder.com/300x200/BB86FC/FFFFFF?text=Certificate+3" alt="Certificate 3">
+                        </div>
+                        <div class="certificate-content">
+                            <h3>Certificate Title 3</h3>
+                            <p class="certificate-date">June 2024</p>
+                            <p class="certificate-description">Description of the certificate or seminar attended.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Software Projects -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <h2 class="section-title">Software Projects</h2>
+                
+                <!-- Year 1 Projects -->
+                <div class="year-section">
+                    <h3 class="year-title">1st Year Projects</h3>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h4 class="project-title">Project Title 1</h4>
+                                <div class="project-links">
+                                    <a href="#" class="project-link github-link" title="View on GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Brief description of the project features and functionality. 
+                                Explain what problem it solves and what technologies were used.
+                            </p>
+                            <div class="project-screenshots">
+                                <img src="https://via.placeholder.com/400x250/373737/E0E0E0?text=GUI+Screenshot+1" alt="Project 1 Screenshot" class="screenshot" onclick="openImageModal(this)">
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h4 class="project-title">Project Title 2</h4>
+                                <div class="project-links">
+                                    <a href="#" class="project-link github-link" title="View on GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Brief description of the project features and functionality.
+                            </p>
+                            <div class="project-screenshots">
+                                <img src="https://via.placeholder.com/400x250/373737/E0E0E0?text=GUI+Screenshot+2" alt="Project 2 Screenshot" class="screenshot" onclick="openImageModal(this)">
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Tkinter</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 2 Projects -->
+                <div class="year-section">
+                    <h3 class="year-title">2nd Year Projects</h3>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h4 class="project-title">Project Title 3</h4>
+                                <div class="project-links">
+                                    <a href="#" class="project-link github-link" title="View on GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Brief description of the project features and functionality.
+                            </p>
+                            <div class="project-screenshots">
+                                <img src="https://via.placeholder.com/400x250/373737/E0E0E0?text=GUI+Screenshot+3" alt="Project 3 Screenshot" class="screenshot" onclick="openImageModal(this)">
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 3 Projects -->
+                <div class="year-section">
+                    <h3 class="year-title">3rd Year Projects</h3>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h4 class="project-title">Project Title 4</h4>
+                                <div class="project-links">
+                                    <a href="#" class="project-link github-link" title="View on GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Brief description of the project features and functionality.
+                            </p>
+                            <div class="project-screenshots">
+                                <img src="https://via.placeholder.com/400x250/373737/E0E0E0?text=GUI+Screenshot+4" alt="Project 4 Screenshot" class="screenshot" onclick="openImageModal(this)">
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 4 Projects -->
+                <div class="year-section">
+                    <h3 class="year-title">4th Year Projects</h3>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h4 class="project-title">Project Title 5</h4>
+                                <div class="project-links">
+                                    <a href="#" class="project-link github-link" title="View on GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Brief description of the project features and functionality.
+                            </p>
+                            <div class="project-screenshots">
+                                <img src="https://via.placeholder.com/400x250/373737/E0E0E0?text=GUI+Screenshot+5" alt="Project 5 Screenshot" class="screenshot" onclick="openImageModal(this)">
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capstone Project -->
+        <section id="capstone" class="section capstone-section">
+            <div class="container">
+                <h2 class="section-title">Capstone Project</h2>
+                <div class="capstone-card">
+                    <div class="capstone-header">
+                        <h3 class="capstone-title">Capstone Project Title</h3>
+                        <div class="project-links">
+                            <a href="#" class="project-link github-link" title="View on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="capstone-description">
+                        Detailed description of your capstone project. Explain the problem it solves, 
+                        the approach you took, challenges faced, and the impact of your solution. 
+                        This is your flagship project, so provide comprehensive details about its features and functionality.
+                    </p>
+                    
+                    <div class="capstone-screenshots">
+                        <h4>Project Screenshots</h4>
+                        <div class="screenshot-grid">
+                            <img src="https://via.placeholder.com/300x200/373737/E0E0E0?text=Capstone+GUI+1" alt="Capstone Screenshot 1" class="screenshot" onclick="openImageModal(this)">
+                            <img src="https://via.placeholder.com/300x200/373737/E0E0E0?text=Capstone+GUI+2" alt="Capstone Screenshot 2" class="screenshot" onclick="openImageModal(this)">
+                            <img src="https://via.placeholder.com/300x200/373737/E0E0E0?text=Capstone+GUI+3" alt="Capstone Screenshot 3" class="screenshot" onclick="openImageModal(this)">
+                        </div>
+                    </div>
+
+                    <div class="capstone-details">
+                        <div class="detail-section">
+                            <h4>Software Used</h4>
+                            <div class="tech-list">
+                                <span class="tech-tag">Programming Language</span>
+                                <span class="tech-tag">Framework</span>
+                                <span class="tech-tag">Database</span>
+                                <span class="tech-tag">IDE/Editor</span>
+                                <span class="tech-tag">Version Control</span>
+                            </div>
+                        </div>
+
+                        <div class="detail-section">
+                            <h4>Hardware Used</h4>
+                            <div class="hardware-list">
+                                <ul>
+                                    <li>Development Machine: [Specifications]</li>
+                                    <li>Testing Hardware: [If applicable]</li>
+                                    <li>Deployment Server: [If applicable]</li>
+                                    <li>Additional Hardware: [Any sensors, devices, etc.]</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practicum -->
+        <section id="practicum" class="section practicum-section">
+            <div class="container">
+                <h2 class="section-title">Practicum</h2>
+                <div class="practicum-card">
+                    <div class="practicum-content">
+                        <h3>Practicum Documentation</h3>
+                        <p>
+                            Access my complete practicum documentation, including reports, reflections, 
+                            and project deliverables from my practical training experience.
+                        </p>
+                        <a href="#" class="practicum-link" target="_blank">
+                            <i class="fab fa-google-drive"></i>
+                            View Practicum PDF on Google Drive
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Let's Connect</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:your.email@example.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="#" class="social-link" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+                <p class="footer-text">
+                    © 2025 Jervyn Jade P. Centeno. Built with passion and dedication.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Image Modal -->
+    <div class="image-modal" id="imageModal" onclick="closeImageModal()">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeImageModal()">&times;</span>
+            <img src="" alt="Enlarged view" id="modalImage">
+            <div class="modal-nav">
+                <button class="modal-nav-btn" id="prevBtn" onclick="previousImage()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="modal-nav-btn" id="nextBtn" onclick="nextImage()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
