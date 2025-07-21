@@ -246,10 +246,17 @@ body {
     box-shadow: 0 4px 15px rgba(187, 134, 252, 0.3);
 }
 
+.skill-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
 /* Certificates Section */
 .certificates-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -268,11 +275,34 @@ body {
     border-color: var(--accent);
 }
 
-.certificate-image img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.certificate-image {
+    position: relative;
+    overflow: hidden;
 }
+
+.certificate-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(135deg, rgba(187,134,252,0.2), rgba(3,218,198,0.2));
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.certificate-image img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    position: relative;
+    z-index: 0;
+}
+
 
 .certificate-content {
     padding: 1.5rem;
