@@ -60,7 +60,7 @@
         <!-- Programming Skills -->
         <section id="skills" class="section skills-section">
             <div class="container">
-                <h2 class="section-title">Programming Skills</h2>
+                <h2 class="section-title">Techstacks</h2>
             <div class="skills-container">
                 <span class="skill-tag">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="skill-icon">
@@ -238,7 +238,7 @@
                                 It helps improve vocabulary and problem-solving skills.
                             </p>
                             <div class="project-screenshots">
-                                <img src="https://via.placeholder.com/400x250/373737/E0E0E0?text=GUI+Screenshot+1" alt="Project 1 Screenshot" class="screenshot" onclick="openImageModal(this)">
+                                <img src="project_images/thumbnail(1).png" alt="Project 1 Thumbnail" class="screenshot" onclick="openImageModal(this, ['project_images/4pics1word(1).png', 'project_images/4pics1word(2).png','project_images/4pics1word(3).png', 'project_images/4pics1word(4).png'])">
                             </div>
                             <div class="project-tech">
                                 <span class="tech-tag">Python</span>
@@ -256,11 +256,15 @@
                                 </div>
                             </div>
                             <p class="project-description">
-                                Simulates a color guessing game where players must identify the correct color based on RGB values.
-                                The game is designed to enhance color recognition skills and understanding of RGB color models.
+                                Simulates a color guessing game, drawing inspiration from classic Filipino betting games,
+                                where players must identify the correct color based on RGB values.
+                                The game is designed to enhance color recognition skills and understanding of RGB color models,
+                                potentially incorporating elements of chance or strategic wagers to amplify the traditional betting experience.
+
+
                             </p>
                             <div class="project-screenshots">
-                                <img src="https://via.placeholder.com/400x250/373737/E0E0E0?text=GUI+Screenshot+2" alt="Project 2 Screenshot" class="screenshot" onclick="openImageModal(this)">
+                                <img src="project_images/thumbnail(2).png" alt="Project 2 Screenshot" class="screenshot" onclick="openImageModal(this, ['project_images/colorGame(1).png', 'project_images/colorGame(2).png'])">
                             </div>
                             <div class="project-tech">
                                 <span class="tech-tag">Python</span>
@@ -289,7 +293,7 @@
                                 The application demonstrates the use of data structures to manage the playlist and track information
                             </p>
                             <div class="project-screenshots">
-                                <img src="https://via.placeholder.com/400x250/373737/E0E0E0?text=GUI+Screenshot+3" alt="Project 3 Screenshot" class="screenshot" onclick="openImageModal(this)">
+                                <img src="project_images/thumbnail(3).png" alt="Project 3 Screenshot" class="screenshot" onclick="openImageModal(this, ['project_images/playlist(1).png', 'project_images/playlist(2).png', 'project_images/playlist(3).png', 'project_images/playlist(4).png'])">
                             </div>
                             <div class="project-tech">
                                 <span class="tech-tag">Python</span>
@@ -305,8 +309,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <p class="project-description">
-                                This project is a web-based application for managing dental clinic appointments. 
+                            <p class="project-description"> 
                                 It allows patients to book, reschedule, and cancel appointments online. 
                                 The application features a user-friendly interface, appointment management system, and patient records.
                                 It is built using C# with ASP.NET for the backend and SQL for database management.
@@ -463,7 +466,7 @@
     </button>
 
     <!-- Image Modal -->
-    <div class="image-modal" id="imageModal" onclick="closeImageModal()">
+    <div class="image-modal" id="imageModal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeImageModal()">&times;</span>
             <img src="" alt="Enlarged view" id="modalImage">
