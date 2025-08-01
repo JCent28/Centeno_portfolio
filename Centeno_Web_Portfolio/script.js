@@ -276,12 +276,12 @@ function scrollToTop() {
 // CV Download Function
 function downloadCV() {
     // Replace with actual CV file path
-    const cvPath = 'path/to/your/cv.pdf';
+    const cvPath = 'Centeno-CV.pdf';
     
     // Create temporary download link
     const link = document.createElement('a');
     link.href = cvPath;
-    link.download = 'Your_Name_CV.pdf';
+    link.download = 'Centeno-CV.pdf';
     link.style.display = 'none';
     
     document.body.appendChild(link);
