@@ -50,7 +50,7 @@ img {
     left: 0;
     right: 0;
     background: rgba(18, 18, 18, 0.95);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(45px);
     border-bottom: 1px solid var(--border);
     z-index: 1000;
     transition: all 0.3s ease;
@@ -110,7 +110,7 @@ img {
 
 .nav-link::after {
     content: '';
-    position: sticky;
+    position: sticky; 
     bottom: -5px;
     left: 0;
     width: 0;
