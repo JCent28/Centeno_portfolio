@@ -110,7 +110,7 @@ img {
 
 .nav-link::after {
     content: '';
-    position: absolute;
+    position: sticky;
     bottom: -5px;
     left: 0;
     width: 0;
