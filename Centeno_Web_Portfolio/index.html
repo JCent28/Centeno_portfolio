@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div id="particles-js"></div>
     <!-- Mobile Menu Toggle -->
     <button class="mobile-menu-toggle" id="mobileMenuToggle">
         <span></span>
@@ -480,5 +481,64 @@
     </div>
 
     <script src="script.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    
 </body>
-</html>c:\Users\MelodinaCenteno\Downloads\Centeno_Portfolio\Centeno-CV.pdf
+</html>
+
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: {
+      value: 60,
+      density: {
+        enable: true,
+        value_area: 800
+      }
+    },
+    color: {
+      value: "#cccccc"  // soft gray particles
+    },
+    shape: {
+      type: "circle"
+    },
+    opacity: {
+      value: 0.4,
+      random: false
+    },
+    size: {
+      value: 3,
+      random: true
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#888888",
+      opacity: 0.2,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 1,
+      direction: "none",
+      out_mode: "out"
+    }
+  },
+  interactivity: {
+    events: {
+      onhover: {
+        enable: true,
+        mode: "repulse"
+      }
+    },
+    modes: {
+      repulse: {
+        distance: 100
+      }
+    }
+  },
+  retina_detect: true
+});
+</script>
