@@ -738,7 +738,7 @@ img {
     }
 
     .nav {
-        position: fixed;
+        position: sticky;
         top: 0;
         right: -100%;
         width: 100%;
