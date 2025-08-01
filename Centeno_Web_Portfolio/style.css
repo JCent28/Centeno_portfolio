@@ -186,11 +186,10 @@ img {
     border-radius: 2px;
 }
 
-/* About Section */
 .about-section {
-    background: linear-gradient(135deg, var(--bg-primary) 0%, #1a1a1a 100%);
-    opacity: 0.9;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 1));
 }
+
 
 .about-content {
     text-align: center;
