@@ -45,7 +45,7 @@ img {
 
 /* Header Styles */
 .header {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -59,7 +59,7 @@ img {
 .header .container {
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
     padding: 1rem 2rem;
 }
 
