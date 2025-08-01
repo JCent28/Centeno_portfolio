@@ -60,7 +60,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: start;
-    
+    padding: 1rem 2rem;
 }
 
 .logo h1 {
