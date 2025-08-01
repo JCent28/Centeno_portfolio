@@ -59,7 +59,7 @@ img {
 .header .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     padding: 1rem 2rem;
 }
 
