@@ -3,7 +3,7 @@
 // Global Variables
 let currentImageIndex = 0;
 let allImages = [];
-const nicknames = ['My Name is Jervyn', 'Jade', 'Vyntot', 'I am a Developer', 'Coder', 'Software Engineer', 'Tech Enthusiast'];
+const nicknames = ['My Name is Jervyn', 'Jade', 'I am a Developer', 'Programmer', 'Software Engineer', 'Tech Enthusiast'];
 let currentNicknameIndex = 0;
 let screenshots = [];
 let currentIndex = 0;
