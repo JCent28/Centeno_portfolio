@@ -40,6 +40,9 @@ body {
 img {
     max-width: 100%;
     height: auto;
+    image-rendering: auto;            /* Default: browser decides */
+    image-rendering: crisp-edges;     /* Use when scaling pixel art or simple graphics */
+    image-rendering: -webkit-optimize-contrast; 
     
 }*/
 
