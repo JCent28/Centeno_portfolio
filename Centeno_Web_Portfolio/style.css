@@ -36,6 +36,13 @@ body {
     padding: 0 2rem;
 }
 
+/* Make all images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    
+}*/
+
 /* Header Styles */
 .header {
     position: fixed;
@@ -246,10 +253,17 @@ body {
     box-shadow: 0 4px 15px rgba(187, 134, 252, 0.3);
 }
 
+.skill-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
 /* Certificates Section */
 .certificates-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -268,11 +282,34 @@ body {
     border-color: var(--accent);
 }
 
-.certificate-image img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.certificate-image {
+    position: relative;
+    overflow: hidden;
 }
+
+.certificate-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(135deg, rgba(187,134,252,0.2), rgba(3,218,198,0.2));
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.certificate-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain; /* or cover if you want cropping */
+    position: relative;
+    z-index: 0;
+}
+
 
 .certificate-content {
     padding: 1.5rem;
@@ -375,20 +412,16 @@ body {
 }
 
 .project-screenshots {
-    margin: 1.5rem 0;
-}
-
-.screenshot {
     width: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: 2px solid var(--border);
+    aspect-ratio: 16/9;
+    overflow: hidden;
 }
 
-.screenshot:hover {
-    border-color: var(--accent);
-    transform: scale(1.02);
+.project-screenshots img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .project-tech {

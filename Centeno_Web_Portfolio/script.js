@@ -5,6 +5,8 @@ let currentImageIndex = 0;
 let allImages = [];
 const nicknames = ['My Name is Jervyn', 'Jade', 'Vyntot', 'I am a Developer', 'Coder', 'Software Engineer', 'Tech Enthusiast'];
 let currentNicknameIndex = 0;
+let screenshots = [];
+let currentIndex = 0;
 
 // DOM Elements
 const mobileMenuToggle = document.getElementById('mobileMenuToggle');
@@ -216,19 +218,11 @@ function collectAllImages() {
 }
 
 // Open Image Modal
-function openImageModal(imgElement) {
-    const imgSrc = imgElement.src;
-    const imgAlt = imgElement.alt;
-    
-    modalImage.src = imgSrc;
-    modalImage.alt = imgAlt;
-    
-    currentImageIndex = allImages.indexOf(imgElement);
-    
-    imageModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-    
-    // Update navigation buttons visibility
+function openImageModal(imgElement, imagesArray) {
+    screenshots = imagesArray;
+    currentIndex = 0;
+    document.getElementById('modalImage').src = screenshots[currentIndex];
+    document.getElementById('imageModal').classList.add('active');
     updateModalNavigation();
 }
 
@@ -236,28 +230,25 @@ function openImageModal(imgElement) {
 function closeImageModal() {
     imageModal.classList.remove('active');
     document.body.style.overflow = '';
+    screenshots = [];
+    currentIndex = 0;
+    
 }
 
 // Previous Image in Modal
 function previousImage() {
-    if (currentImageIndex > 0) {
-        currentImageIndex--;
-        const prevImg = allImages[currentImageIndex];
-        modalImage.src = prevImg.src;
-        modalImage.alt = prevImg.alt;
-        updateModalNavigation();
-    }
+    if (screenshots.length === 0) return;
+    currentIndex = (currentIndex - 1 + screenshots.length) % screenshots.length;
+    document.getElementById('modalImage').src = screenshots[currentIndex];
+    updateModalNavigation();
 }
 
 // Next Image in Modal
 function nextImage() {
-    if (currentImageIndex < allImages.length - 1) {
-        currentImageIndex++;
-        const nextImg = allImages[currentImageIndex];
-        modalImage.src = nextImg.src;
-        modalImage.alt = nextImg.alt;
-        updateModalNavigation();
-    }
+    if (screenshots.length === 0) return;
+    currentIndex = (currentIndex + 1) % screenshots.length;
+    document.getElementById('modalImage').src = screenshots[currentIndex];
+    updateModalNavigation();
 }
 
 // Update Modal Navigation Buttons
@@ -265,12 +256,12 @@ function updateModalNavigation() {
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     
-    if (prevBtn && nextBtn) {
-        prevBtn.style.opacity = currentImageIndex > 0 ? '1' : '0.3';
-        nextBtn.style.opacity = currentImageIndex < allImages.length - 1 ? '1' : '0.3';
+    if (prevBtn && nextBtn && screenshots.length > 0) {
+        prevBtn.style.opacity = currentIndex > 0 ? '1' : '0.3';
+        nextBtn.style.opacity = currentIndex < screenshots.length - 1 ? '1' : '0.3';
         
-        prevBtn.disabled = currentImageIndex === 0;
-        nextBtn.disabled = currentImageIndex === allImages.length - 1;
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === screenshots.length - 1;
     }
 }
 
@@ -500,3 +491,15 @@ window.previousImage = previousImage;
 window.nextImage = nextImage;
 window.scrollToTop = scrollToTop;
 window.downloadCV = downloadCV;
+
+document.getElementById('modalImage').addEventListener('click', function(e) {
+    const img = e.target;
+    const rect = img.getBoundingClientRect();
+    const x = e.clientX - rect.left; // x position within the image
+
+    if (x < rect.width / 2) {
+        previousImage();
+    } else {
+        nextImage();
+    }
+});
